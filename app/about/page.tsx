@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
 import { Check } from "lucide-react";
 
-export const metadata: Metadata = { title: "About", description: "Discover ELENOI's vision, mission, strategy and values." };
+export const metadata: Metadata = {
+  title: "About ELENOI",
+  description: "Discover ELENOI's vision, mission, strategy and values.",
+  alternates: { canonical: "/about" },
+};
 
 const values = ["Hard work", "Integrity", "Constant learning", "Constant teaching", "Creativity", "Thrift and financial discipline", "Accountability", "Sacrifice and selflessness"];
 

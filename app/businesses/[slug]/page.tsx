@@ -16,7 +16,17 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const business = getBusiness((await params).slug);
   if (!business) return {};
-  return { title: business.name, description: business.summary };
+  return {
+    title: business.name,
+    description: business.summary,
+    alternates: { canonical: `/businesses/${business.slug}` },
+    openGraph: {
+      title: business.name,
+      description: business.summary,
+      type: "article",
+      images: [{ url: business.image, alt: `${business.name} activity` }],
+    },
+  };
 }
 
 export default async function BusinessPage({
@@ -49,6 +59,16 @@ export default async function BusinessPage({
             <ArrowLeft size={16} /> All businesses
           </Link>
           <p className="eyebrow">{business.activity}</p>
+          {business.brandLogo && (
+            <div className="detail-hero__brand-logo">
+              <Image
+                src={business.brandLogo}
+                alt={`${business.name} logo`}
+                fill
+                sizes="144px"
+              />
+            </div>
+          )}
           <h1 className="text-gray-300">{business.name}</h1>
           <p>{business.eyebrow}</p>
         </div>

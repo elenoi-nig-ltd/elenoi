@@ -5,6 +5,7 @@ import { businesses } from "@/lib/businesses";
 export const metadata: Metadata = {
   title: "Our Businesses",
   description: "Explore ELENOI's active businesses across seven sectors of the Nigerian economy.",
+  alternates: { canonical: "/businesses" },
 };
 
 export default function BusinessesPage() {

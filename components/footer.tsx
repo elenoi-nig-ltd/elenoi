@@ -45,7 +45,7 @@ export function Footer() {
             <MapPin size={15} aria-hidden="true" /> No. 4 KFF Street, after
             Central Mosque, Gidan Kwano, Minna.
           </p>
-          <a href="mailto:hello@elenoi.com">hello@elenoi.com</a>
+          <a href="mailto:elenoi.nig.ltd@gmail.com">elenoi.nig.ltd@gmail.com</a>
         </div>
       </div>
       <div className="footer-bottom wrap">

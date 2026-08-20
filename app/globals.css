@@ -263,6 +263,12 @@
   .business-row__image img {
     @apply object-cover brightness-[.96] saturate-[.78] transition duration-500 hover:scale-[1.025] hover:brightness-100 hover:saturate-100 dark:brightness-[.82];
   }
+  .business-row__brand-logo {
+    @apply absolute bottom-4 left-4 z-[1] h-16 w-24 overflow-hidden border border-black/10 bg-white p-2 shadow-lg dark:border-white/15;
+  }
+  .business-row__brand-logo img {
+    @apply object-contain brightness-100 saturate-100;
+  }
   .business-row__content {
     @apply max-md:col-start-2;
   }
@@ -343,6 +349,12 @@
   .spotlight__content h2 {
     @apply mb-6 mt-5;
   }
+  .spotlight__brand-logo {
+    @apply relative mt-5 h-20 w-36 overflow-hidden border border-black/10 bg-white p-3 dark:border-white/15;
+  }
+  .spotlight__brand-logo img {
+    @apply object-contain;
+  }
 
   .page-hero {
     @apply grid min-h-[570px] grid-cols-[1.5fr_.7fr] items-end gap-20 py-[165px_85px] max-lg:grid-cols-1 max-lg:gap-9 max-md:min-h-[620px] max-md:py-[140px_70px];
@@ -397,6 +409,12 @@
   }
   .detail-hero__content h1 {
     @apply mb-3 mt-5 max-w-[1000px] font-display text-[clamp(3.5rem,7.5vw,7.8rem)] font-normal leading-[.96] max-md:text-[clamp(3rem,13vw,5.2rem)];
+  }
+  .detail-hero__brand-logo {
+    @apply relative mb-5 mt-8 h-20 w-36 overflow-hidden border border-white/20 bg-white p-3;
+  }
+  .detail-hero__brand-logo img {
+    @apply object-contain;
   }
   .detail-hero__content > p:last-child {
     @apply m-0 font-ui text-lg text-slate-300;
@@ -513,29 +531,83 @@
     @apply mt-1 shrink-0 text-elenoi-green-light;
   }
   .contact-form {
-    @apply self-end border border-black/10 bg-[#eef0ed] p-11 dark:border-white/10 dark:bg-slate max-md:p-7;
+    @apply relative self-end border border-black/10 bg-[#eef0ed] p-6 shadow-[0_24px_70px_rgba(18,19,22,.08)] dark:border-white/10 dark:bg-slate dark:shadow-[0_24px_70px_rgba(0,0,0,.22)] max-md:p-3;
+  }
+  .contact-form__section {
+    @apply border-b border-black/10 bg-white/20 px-10 py-10 dark:border-white/10 dark:bg-obsidian/10 max-md:px-6 max-md:py-8;
+  }
+  .form-section-label {
+    @apply mb-6 font-ui text-[.65rem] font-semibold uppercase tracking-[.14em] text-elenoi-green dark:text-elenoi-green-light;
   }
   .contact-form label {
-    @apply mb-6 flex flex-col gap-2 font-ui text-[.7rem] font-medium tracking-wide text-slate-600 dark:text-[#bfc2c4];
+    @apply mb-5 flex flex-col gap-2 font-ui text-[.7rem] font-medium tracking-wide text-slate-700 dark:text-[#c7c9cb];
+  }
+  .field-label {
+    @apply inline-flex min-h-4 w-full flex-row flex-nowrap items-center gap-1 whitespace-nowrap;
+  }
+  .field-label i {
+    @apply inline-flex shrink-0 not-italic leading-none text-elenoi-gold;
+  }
+  .field-label em {
+    @apply ml-auto font-ui text-[.54rem] font-medium not-italic uppercase tracking-[.08em] text-slate-400 dark:text-[#74787c];
   }
   .contact-form input,
   .contact-form textarea,
   .contact-form select {
-    @apply w-full border-0 border-b border-slate-400 bg-transparent px-0 py-2 outline-none dark:border-[#4b4e52] dark:text-white;
+    @apply w-full border border-black/10 bg-white/70 px-3.5 py-3 text-sm text-obsidian outline-none transition-[border-color,background-color,box-shadow] placeholder:text-slate-400 hover:border-black/20 focus:border-elenoi-green focus:bg-white focus:shadow-[0_0_0_3px_rgba(30,125,66,.1)] dark:border-white/10 dark:bg-obsidian/45 dark:text-white dark:placeholder:text-[#666b70] dark:hover:border-white/20 dark:focus:border-elenoi-green-light dark:focus:bg-obsidian/70 dark:focus:shadow-[0_0_0_3px_rgba(75,173,107,.12)];
+  }
+  .contact-form textarea {
+    @apply min-h-32 resize-y leading-relaxed;
+  }
+  .contact-form select {
+    @apply cursor-pointer;
   }
   .contact-form input:focus,
   .contact-form textarea:focus,
   .contact-form select:focus {
-    @apply border-elenoi-green-light;
+    @apply border-elenoi-green;
   }
   .contact-form select option {
-    @apply bg-slate;
+    @apply bg-white text-obsidian dark:bg-slate dark:text-white;
   }
   .field-pair {
-    @apply grid grid-cols-2 gap-6 max-md:grid-cols-1 max-md:gap-0;
+    @apply grid grid-cols-2 gap-5 max-md:grid-cols-1 max-md:gap-0;
+  }
+  .contact-form__footer {
+    @apply flex min-h-24 items-center justify-between gap-6 bg-white/35 px-10 py-8 dark:bg-obsidian/15 max-md:flex-col max-md:items-stretch max-md:px-6 max-md:py-6;
   }
   .contact-form .button {
-    @apply w-full border-0;
+    @apply min-w-44 shrink-0 border-0 max-md:w-full;
+  }
+  .contact-form .button:disabled {
+    @apply cursor-wait opacity-60;
+  }
+  .field-error {
+    @apply mt-0.5 flex items-center font-ui text-[.62rem] font-normal text-red-600 dark:text-red-300;
+  }
+  .contact-form [aria-invalid="true"] {
+    @apply border-red-600 dark:border-red-300;
+  }
+  .honeypot {
+    @apply absolute left-[-9999px] h-px w-px overflow-hidden opacity-0;
+  }
+  .form-feedback {
+    @apply flex min-h-9 max-w-sm items-center gap-2.5 text-left text-[.66rem] leading-relaxed;
+  }
+  .form-feedback p {
+    @apply m-0;
+  }
+  .form-feedback svg {
+    @apply shrink-0;
+  }
+  .form-feedback--idle {
+    @apply text-slate-500;
+  }
+  .form-feedback--success {
+    @apply text-elenoi-green dark:text-elenoi-green-light;
+  }
+  .form-feedback--error {
+    @apply text-red-700 dark:text-red-300;
   }
   .form-note {
     @apply mt-4 text-center text-[.65rem] text-slate-500;
