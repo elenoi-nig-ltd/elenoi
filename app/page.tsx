@@ -187,23 +187,16 @@ export default function HomePage() {
       <section className="spotlight wrap">
         <div className="spotlight__image">
           <Image
-            src="/images/businesses/flamingo-french-fries.jpg"
-            alt="Flamingo food and hospitality"
+            src="/images/businesses/flamingo-logo.png"
+            alt="Flamingo logo"
             fill
             sizes="(max-width: 800px) 100vw, 50vw"
+            className="spotlight__image--logo"
           />
         </div>
         <div className="spotlight__content">
           <p className="section-number">04 / Business spotlight</p>
           <p className="eyebrow eyebrow--gold">Flamingo</p>
-          <div className="spotlight__brand-logo">
-            <Image
-              src="/api/assets/flamingo%20bag%20A3.png"
-              alt="Flamingo logo"
-              fill
-              sizes="144px"
-            />
-          </div>
           <h2 className="text-4xl">Everyday convenience, made local.</h2>
           <p>
             Flamingo is ELENOI's consumer platform for food, household

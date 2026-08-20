@@ -263,11 +263,8 @@
   .business-row__image img {
     @apply object-cover brightness-[.96] saturate-[.78] transition duration-500 hover:scale-[1.025] hover:brightness-100 hover:saturate-100 dark:brightness-[.82];
   }
-  .business-row__brand-logo {
-    @apply absolute bottom-4 left-4 z-[1] h-16 w-24 overflow-hidden border border-black/10 bg-white p-2 shadow-lg dark:border-white/15;
-  }
-  .business-row__brand-logo img {
-    @apply object-contain brightness-100 saturate-100;
+  .business-row__image img.business-row__image--logo {
+    @apply object-contain p-12 brightness-100 saturate-100 transition-transform duration-500 hover:scale-105 dark:brightness-100 max-md:p-10;
   }
   .business-row__content {
     @apply max-md:col-start-2;
@@ -340,6 +337,9 @@
   .spotlight__image img {
     @apply object-cover;
   }
+  .spotlight__image img.spotlight__image--logo {
+    @apply object-contain bg-[#f8f5e6] p-20 dark:bg-[#202226] max-md:p-12;
+  }
   .spotlight__content {
     @apply flex flex-col items-start justify-center p-[clamp(45px,7vw,90px)] max-md:min-h-[520px] max-md:px-6;
   }
@@ -348,12 +348,6 @@
   }
   .spotlight__content h2 {
     @apply mb-6 mt-5;
-  }
-  .spotlight__brand-logo {
-    @apply relative mt-5 h-20 w-36 overflow-hidden border border-black/10 bg-white p-3 dark:border-white/15;
-  }
-  .spotlight__brand-logo img {
-    @apply object-contain;
   }
 
   .page-hero {
@@ -410,11 +404,8 @@
   .detail-hero__content h1 {
     @apply mb-3 mt-5 max-w-[1000px] font-display text-[clamp(3.5rem,7.5vw,7.8rem)] font-normal leading-[.96] max-md:text-[clamp(3rem,13vw,5.2rem)];
   }
-  .detail-hero__brand-logo {
-    @apply relative mb-5 mt-8 h-20 w-36 overflow-hidden border border-white/20 bg-white p-3;
-  }
-  .detail-hero__brand-logo img {
-    @apply object-contain;
+  .detail-hero__image img.detail-hero__image--logo {
+    @apply object-contain bg-[#f8f5e6] p-24 brightness-100 saturate-100 dark:bg-[#202226] max-md:p-16;
   }
   .detail-hero__content > p:last-child {
     @apply m-0 font-ui text-lg text-slate-300;

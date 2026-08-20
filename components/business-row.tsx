@@ -8,12 +8,7 @@ export function BusinessRow({ business, index }: { business: Business; index: nu
     <article className={`business-row business-row--${business.accent}`}>
       <div className="business-row__number">{String(index + 1).padStart(2, "0")}</div>
       <div className="business-row__image">
-        <Image src={business.image} alt={`${business.name} activity`} fill sizes="(max-width: 800px) 100vw, 34vw" />
-        {business.brandLogo && (
-          <div className="business-row__brand-logo">
-            <Image src={business.brandLogo} alt={`${business.name} logo`} fill sizes="96px" />
-          </div>
-        )}
+        <Image className={business.image.endsWith("flamingo-logo.png") ? "business-row__image--logo" : ""} src={business.image} alt={`${business.name} brand`} fill sizes="(max-width: 800px) 100vw, 34vw" />
       </div>
       <div className="business-row__content">
         <p className="eyebrow">{business.activity}</p>

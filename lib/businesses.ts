@@ -7,7 +7,6 @@ export type Business = {
   description: string;
   location: string;
   image: string;
-  brandLogo?: string;
   accent: "green" | "gold" | "platinum";
   externalUrl?: string;
   services: string[];
@@ -24,15 +23,14 @@ export const businesses: Business[] = [
     description:
       "Flamingo French Fries brings accessible food service closer to the people who need it. Its outlets and digital marketplace support convenient ordering around the FUT Minna community and beyond.",
     location: "Minna, Niger State",
-    image: "/images/businesses/flamingo-french-fries.jpg",
-    brandLogo: "/api/assets/flamingo%20bag%20A3.png",
+    image: "/images/businesses/flamingo-logo.png",
     accent: "gold",
     externalUrl: "https://flamingo.com.ng",
     services: ["Prepared food", "Campus delivery", "Food marketplace"],
   },
   {
     slug: "flamingo-enterprise",
-    name: "Flamingo Premium Collections",
+    name: "Flamingo Enterprise",
     activity: "Commerce & Merchandise",
     eyebrow: "Useful products, closer to home",
     summary:
@@ -40,8 +38,7 @@ export const businesses: Business[] = [
     description:
       "Flamingo Enterprise extends ELENOI's customer-facing reach through practical retail and merchandise. The business is built around convenience, trusted products and responsive local service.",
     location: "Minna, Niger State",
-    image: "/images/businesses/flamingo-enterprise.jpg",
-    brandLogo: "/api/assets/flamingo%20bag%20A3.png",
+    image: "/images/businesses/flamingo-logo.png",
     accent: "gold",
     externalUrl: "https://flamingo.com.ng",
     services: ["Household retail", "Premium merchandise", "Local fulfilment"],
@@ -93,8 +90,7 @@ export const businesses: Business[] = [
     description:
       "The hub connects research with execution, developing technology and practical knowledge for ELENOI businesses and the communities they serve. It supports experimentation, skills and locally relevant solutions.",
     location: "Minna, Niger State",
-    image: "/images/businesses/tech-research.jpg",
-    brandLogo: "/api/assets/flamingo%20bag%20A3.png",
+    image: "/images/businesses/flamingo-logo.png",
     accent: "platinum",
     services: ["Applied research", "Digital products", "Technology training"],
   },

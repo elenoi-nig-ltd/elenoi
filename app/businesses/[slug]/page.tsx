@@ -45,13 +45,7 @@ export default async function BusinessPage({
     <>
       <section className={`detail-hero detail-hero--${business.accent}`}>
         <div className="detail-hero__image">
-          <Image
-            src={business.image}
-            alt={`${business.name} activity`}
-            fill
-            priority
-            sizes="100vw"
-          />
+          <Image className={business.image.endsWith("flamingo-logo.png") ? "detail-hero__image--logo" : ""} src={business.image} alt={`${business.name} brand`} fill priority sizes="100vw" />
           <div className="detail-hero__veil" />
         </div>
         <div className="detail-hero__content wrap">
@@ -59,16 +53,6 @@ export default async function BusinessPage({
             <ArrowLeft size={16} /> All businesses
           </Link>
           <p className="eyebrow">{business.activity}</p>
-          {business.brandLogo && (
-            <div className="detail-hero__brand-logo">
-              <Image
-                src={business.brandLogo}
-                alt={`${business.name} logo`}
-                fill
-                sizes="144px"
-              />
-            </div>
-          )}
           <h1 className="text-gray-300">{business.name}</h1>
           <p>{business.eyebrow}</p>
         </div>
