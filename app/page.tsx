@@ -12,6 +12,7 @@ import { BusinessRow } from "@/components/business-row";
 import { businesses } from "@/lib/businesses";
 import { LeaderCard } from "@/components/leader-card";
 import { directors } from "@/lib/leadership";
+import { strategicPillars } from "@/lib/strategy";
 
 const strategies = [
   {
@@ -42,7 +43,7 @@ export default function HomePage() {
       <section className="hero">
         <div className="hero__media">
           <Image
-            src="/images/businesses/ancient-scroll-publishers.jpg"
+            src="/images/businesses/hero-bg.png"
             alt="Books and knowledge representing ELENOI's publishing activity"
             fill
             priority
@@ -56,7 +57,7 @@ export default function HomePage() {
               <span /> Nigerian enterprise / 01
             </p>
             <h1>ELENOI</h1>
-            <p className="hero__statement">
+            <p className="hero__statement text-lg">
               A diversified Nigerian group building capable people and enduring
               businesses for a more productive future.
             </p>
@@ -185,13 +186,54 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+      <section className="strategy-preview wrap">
+        <div className="strategy-preview__heading">
+          <div>
+            <p className="section-number">04 / Our strategy</p>
+            <h2>
+              Five pillars.
+              <br />
+              <em>One direction.</em>
+            </h2>
+          </div>
+          <div>
+            <p>
+              Our strategy guides the way we develop people, build partnerships
+              and grow a diversified portfolio with global ambition.
+            </p>
+            <Link className="text-link" href="/about/strategy">
+              Explore our strategy <ArrowUpRight size={16} />
+            </Link>
+          </div>
+        </div>
+        <div className="strategy-preview__list">
+          {strategicPillars.map((pillar) => (
+            <Link href="/about/strategy" key={pillar.number}>
+              <span>{pillar.number}</span>
+              <strong>{pillar.title}</strong>
+              <ArrowUpRight size={18} aria-hidden="true" />
+            </Link>
+          ))}
+        </div>
+      </section>
       <section className="people-preview wrap">
         <div className="people-preview__heading">
-          <div><p className="section-number">04 / The people behind ELENOI</p><h2>Leadership with<br /><em>responsibility.</em></h2></div>
-          <Link className="text-link" href="/about#leadership">Meet our leadership <ArrowUpRight size={16} /></Link>
+          <div>
+            <p className="section-number">05 / The people behind ELENOI</p>
+            <h2>
+              Leadership with
+              <br />
+              <em>responsibility.</em>
+            </h2>
+          </div>
+          <Link className="text-link" href="/about#leadership">
+            Meet our leadership <ArrowUpRight size={16} />
+          </Link>
         </div>
         <div className="people-preview__grid">
-          {directors.map((leader) => <LeaderCard compact leader={leader} key={leader.slug} />)}
+          {directors.map((leader) => (
+            <LeaderCard compact leader={leader} key={leader.slug} />
+          ))}
         </div>
       </section>
 
@@ -206,7 +248,7 @@ export default function HomePage() {
           />
         </div>
         <div className="spotlight__content">
-          <p className="section-number">05 / Business spotlight</p>
+          <p className="section-number">06 / Business spotlight</p>
           <p className="eyebrow eyebrow--gold">Flamingo</p>
           <h2 className="text-4xl">Everyday convenience, made local.</h2>
           <p>

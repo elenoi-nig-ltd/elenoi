@@ -69,7 +69,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${cinzel.variable} ${outfit.variable} ${jakarta.variable}`}>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${cinzel.variable} ${outfit.variable} ${jakarta.variable}`}
+    >
       <body className="bg-platinum text-obsidian antialiased transition-colors duration-300 dark:bg-obsidian dark:text-platinum">
         <ThemeProvider>
           <Header />

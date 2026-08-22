@@ -140,12 +140,14 @@
   .detail-hero__image {
     @apply absolute inset-0;
   }
-  .hero__media img,
+  .hero__media img {
+    @apply object-cover brightness-[.94] saturate-[.9] dark:brightness-[.65];
+  }
   .detail-hero__image img {
     @apply object-cover brightness-[.82] saturate-[.72] dark:brightness-[.65];
   }
   .hero__veil {
-    @apply absolute inset-0 bg-[linear-gradient(90deg,rgba(242,244,241,.98)_0%,rgba(242,244,241,.88)_38%,rgba(242,244,241,.18)_78%),linear-gradient(0deg,#f2f4f1_0%,transparent_42%)] dark:bg-[linear-gradient(90deg,rgba(18,19,22,.98)_0%,rgba(18,19,22,.72)_46%,rgba(18,19,22,.14)_78%),linear-gradient(0deg,#121316_0%,transparent_32%)];
+    @apply absolute inset-0 bg-[linear-gradient(90deg,rgba(242,244,241,.98)_0%,rgba(242,244,241,.76)_28%,rgba(242,244,241,.28)_55%,rgba(242,244,241,0)_78%),linear-gradient(0deg,rgba(242,244,241,.82)_0%,rgba(242,244,241,.22)_20%,rgba(242,244,241,0)_48%)] dark:bg-[linear-gradient(90deg,rgba(18,19,22,.98)_0%,rgba(18,19,22,.72)_46%,rgba(18,19,22,.14)_78%),linear-gradient(0deg,#121316_0%,transparent_32%)];
   }
   .hero__content {
     @apply relative z-[1] flex min-h-svh items-end justify-between pb-20 pt-32 max-lg:pb-16;
@@ -327,6 +329,108 @@
   }
   .strategy-grid p {
     @apply m-0 text-xs text-muted;
+  }
+  .strategy-preview {
+    @apply border-t border-black/10 py-28 dark:border-white/15 max-md:py-20;
+  }
+  .strategy-preview__heading {
+    @apply mb-14 grid grid-cols-[1.1fr_.8fr] items-end gap-16 max-lg:grid-cols-1 max-lg:gap-6;
+  }
+  .strategy-preview__heading h2 {
+    @apply mt-5 font-display text-[clamp(2.5rem,5vw,5rem)] font-normal leading-[1.04];
+  }
+  .strategy-preview__heading h2 em {
+    @apply not-italic text-elenoi-green-light;
+  }
+  .strategy-preview__heading > div:last-child {
+    @apply max-w-[520px] justify-self-end max-lg:justify-self-start;
+  }
+  .strategy-preview__heading > div:last-child p {
+    @apply m-0 text-sm text-muted;
+  }
+  .strategy-preview__heading .text-link {
+    @apply mt-6;
+  }
+  .strategy-preview__list {
+    @apply border-t border-black/10 dark:border-white/15;
+  }
+  .strategy-preview__list a {
+    @apply grid grid-cols-[60px_1fr_auto] items-center gap-5 border-b border-black/10 py-5 transition-colors hover:bg-black/[.025] dark:border-white/15 dark:hover:bg-white/[.025] max-md:grid-cols-[40px_1fr_auto];
+  }
+  .strategy-preview__list span {
+    @apply font-display text-lg text-elenoi-green dark:text-elenoi-green-light;
+  }
+  .strategy-preview__list strong {
+    @apply max-w-[760px] font-ui text-sm font-medium max-md:text-xs;
+  }
+  .strategy-preview__list svg {
+    @apply text-slate-400 transition-transform group-hover:translate-x-1;
+  }
+  .about-strategy-link {
+    @apply flex items-end justify-between gap-8 border-t border-black/10 py-20 dark:border-white/15 max-md:flex-col max-md:items-start max-md:py-16;
+  }
+  .about-strategy-link h2 {
+    @apply mb-0 mt-5 max-w-[680px] font-display text-[clamp(2rem,4vw,4rem)] font-normal leading-tight;
+  }
+  .strategy-hero {
+    @apply min-h-[560px] border-b border-black/10 pb-24 pt-[165px] dark:border-white/15 max-md:min-h-[620px] max-md:pb-16 max-md:pt-[140px];
+  }
+  .strategy-hero__body {
+    @apply mt-20 grid grid-cols-[1.3fr_.7fr] items-end gap-20 max-lg:grid-cols-1 max-lg:gap-7 max-md:mt-16;
+  }
+  .strategy-hero h1 {
+    @apply m-0 max-w-[820px] font-display text-[clamp(3.4rem,7vw,7rem)] font-normal leading-[.98];
+  }
+  .strategy-hero h1 em {
+    @apply not-italic text-elenoi-green-light;
+  }
+  .strategy-hero__body > p {
+    @apply m-0 max-w-[520px] text-base text-muted;
+  }
+  .strategy-framework {
+    @apply bg-[#f4f5f3] py-28 dark:bg-[#17181b] max-md:py-20;
+  }
+  .strategy-framework__intro {
+    @apply mb-14 grid grid-cols-[1fr_2fr] gap-10 max-md:grid-cols-1 max-md:gap-4;
+  }
+  .strategy-framework__intro p:last-child {
+    @apply m-0 max-w-[650px] text-sm text-muted;
+  }
+  .strategy-list {
+    @apply border-t border-black/10 dark:border-white/15;
+  }
+  .strategy-pillar {
+    @apply relative grid grid-cols-[90px_1.15fr_1fr_32px] items-center gap-8 border-b border-black/10 py-9 dark:border-white/15 max-lg:grid-cols-[70px_1fr_32px] max-md:grid-cols-[42px_1fr_28px] max-md:gap-4 max-md:py-7;
+  }
+  .strategy-pillar__number {
+    @apply font-display text-2xl text-elenoi-green dark:text-elenoi-green-light max-md:text-lg;
+  }
+  .strategy-pillar h2 {
+    @apply m-0 max-w-[560px] font-display text-[clamp(1.35rem,2.2vw,2.2rem)] font-normal leading-tight;
+  }
+  .strategy-pillar p {
+    @apply m-0 max-w-[480px] text-sm text-muted max-lg:col-start-2 max-lg:mt-3 max-md:text-xs;
+  }
+  .strategy-pillar__arrow {
+    @apply text-slate-400 transition-transform group-hover:translate-x-1;
+  }
+  .strategy-portfolio {
+    @apply grid grid-cols-[1fr_1fr] gap-20 py-28 max-lg:grid-cols-1 max-lg:gap-7 max-md:py-20;
+  }
+  .strategy-portfolio h2 {
+    @apply mt-5 max-w-[600px] font-display text-[clamp(2.4rem,4.5vw,4.5rem)] font-normal leading-[1.05];
+  }
+  .strategy-portfolio > div:last-child {
+    @apply max-w-[560px] self-end;
+  }
+  .strategy-portfolio > div:last-child p {
+    @apply m-0 mb-7 text-sm text-muted;
+  }
+  .strategy-contact {
+    @apply border-t border-black/10 py-24 dark:border-white/15 max-md:py-20;
+  }
+  .strategy-contact h2 {
+    @apply mb-8 mt-5 max-w-[760px] font-display text-[clamp(2.4rem,5vw,5rem)] font-normal leading-[1.04];
   }
   .spotlight {
     @apply mb-28 grid min-h-[580px] grid-cols-[1.05fr_.95fr] bg-slate/10 max-md:mb-20 max-md:w-full max-md:grid-cols-1 dark:bg-slate;

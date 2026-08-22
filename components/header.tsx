@@ -9,7 +9,7 @@ import { useState } from "react";
 const links = [
   { href: "/about", label: "About" },
   { href: "/businesses", label: "Our businesses" },
-  { href: "/#purpose", label: "Our purpose" },
+  { href: "/about/strategy", label: "Our strategy" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -18,7 +18,7 @@ export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   function isActive(href: string) {
-    if (href === "/#purpose") return pathname === "/";
+    if (href === "/about") return pathname === "/about";
     return pathname.startsWith(href);
   }
 

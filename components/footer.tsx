@@ -35,6 +35,7 @@ export function Footer() {
         <div>
           <h3>Company</h3>
           <Link href="/about">About us</Link>
+          <Link href="/about/strategy">Our strategy</Link>
           <Link href="/businesses">Our businesses</Link>
           <Link href="/contact">Partnerships</Link>
           <Link href="/privacy">Privacy</Link>
