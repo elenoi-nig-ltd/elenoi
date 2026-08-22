@@ -11,7 +11,7 @@ import Link from "next/link";
 import { BusinessRow } from "@/components/business-row";
 import { businesses } from "@/lib/businesses";
 import { LeaderCard } from "@/components/leader-card";
-import { directors } from "@/lib/leadership";
+import { companyRegistration, directors } from "@/lib/leadership";
 import { strategicPillars } from "@/lib/strategy";
 
 const strategies = [
@@ -83,13 +83,20 @@ export default function HomePage() {
           <span>ELENOI NIG. LTD</span>
           <span>Enterprise for lasting progress</span>
         </div>
-        <a
-          className="scroll-cue"
-          href="#portfolio"
-          aria-label="Scroll to our portfolio"
-        >
-          <ArrowDown size={18} />
-        </a>
+        <div className="hero__footer wrap">
+          <span className="hero__footer-label">ELENOI NIG. LTD</span>
+          <div className="hero__registration">
+            <span>Registered company</span>
+            <strong>{companyRegistration}</strong>
+          </div>
+          <a
+            className="scroll-cue"
+            href="#portfolio"
+            aria-label="Scroll to our portfolio"
+          >
+            <ArrowDown size={18} />
+          </a>
+        </div>
       </section>
 
       <section className="intro wrap">

@@ -150,7 +150,7 @@
     @apply absolute inset-0 bg-[linear-gradient(90deg,rgba(242,244,241,.98)_0%,rgba(242,244,241,.76)_28%,rgba(242,244,241,.28)_55%,rgba(242,244,241,0)_78%),linear-gradient(0deg,rgba(242,244,241,.82)_0%,rgba(242,244,241,.22)_20%,rgba(242,244,241,0)_48%)] dark:bg-[linear-gradient(90deg,rgba(18,19,22,.98)_0%,rgba(18,19,22,.72)_46%,rgba(18,19,22,.14)_78%),linear-gradient(0deg,#121316_0%,transparent_32%)];
   }
   .hero__content {
-    @apply relative z-[1] flex min-h-svh items-end justify-between pb-20 pt-32 max-lg:pb-16;
+    @apply relative z-[1] flex min-h-svh items-end justify-between pb-28 pt-32 max-lg:pb-28;
   }
   .hero .eyebrow {
     @apply flex items-center gap-3;
@@ -177,13 +177,28 @@
     @apply font-ui text-[.62rem] font-medium uppercase leading-snug tracking-[.1em] text-slate-500 dark:text-muted;
   }
   .scroll-cue {
-    @apply absolute bottom-6 right-7 z-[2] grid size-10 place-items-center rounded-full border border-black/10 dark:border-white/15 max-md:hidden;
+    @apply grid size-9 place-items-center rounded-full border border-black/10 transition-colors hover:border-elenoi-green hover:text-elenoi-green dark:border-white/15 dark:hover:border-elenoi-green-light dark:hover:text-elenoi-green-light max-md:hidden;
   }
   .hero__side-note {
     @apply absolute right-0 top-1/2 z-[1] hidden -translate-y-1/2 rotate-90 items-center gap-4 font-ui text-[.58rem] uppercase tracking-[.16em] text-slate-500 lg:flex dark:text-[#85898d];
   }
   .hero__side-note span + span {
     @apply border-l border-black/20 pl-4 dark:border-white/20;
+  }
+  .hero__footer {
+    @apply absolute bottom-0 left-1/2 z-[2] grid h-16 -translate-x-1/2 grid-cols-[1fr_auto_1fr] items-center border-t border-black/10 dark:border-white/15 max-md:h-20 max-md:grid-cols-1;
+  }
+  .hero__footer-label {
+    @apply font-ui text-[.56rem] font-semibold uppercase tracking-[.14em] text-slate-500 dark:text-[#85898d] max-md:hidden;
+  }
+  .hero__footer .scroll-cue {
+    @apply justify-self-end;
+  }
+  .hero__registration {
+    @apply flex items-baseline justify-self-center gap-3 whitespace-nowrap font-ui text-[.56rem] uppercase tracking-[.12em] text-slate-500 dark:text-[#85898d] max-md:flex-col max-md:items-center max-md:gap-1 max-md:text-center;
+  }
+  .hero__registration strong {
+    @apply font-ui text-[.62rem] font-semibold tracking-[.1em] text-elenoi-green/85 dark:text-elenoi-green-light/85;
   }
 
   .intro {
