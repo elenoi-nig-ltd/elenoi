@@ -340,6 +340,75 @@
   .spotlight__image img.spotlight__image--logo {
     @apply object-contain bg-[#f8f5e6] p-20 dark:bg-[#202226] max-md:p-12;
   }
+  .people-preview {
+    @apply border-t border-black/10 py-28 dark:border-white/15 max-md:py-20;
+  }
+  .people-preview__heading {
+    @apply mb-14 flex items-end justify-between gap-8 max-md:flex-col max-md:items-start;
+  }
+  .people-preview__heading h2 {
+    @apply mt-5 font-display text-[clamp(2.5rem,5vw,5rem)] font-normal leading-[1.04];
+  }
+  .people-preview__heading em {
+    @apply not-italic text-elenoi-green-light;
+  }
+  .people-preview__grid {
+    @apply grid grid-cols-2 gap-6 max-md:grid-cols-1;
+  }
+  .leadership {
+    @apply border-t border-black/10 py-32 dark:border-white/15 max-md:py-24;
+  }
+  .leadership__intro {
+    @apply mb-16 grid grid-cols-[1.3fr_1fr] items-end gap-16 max-lg:grid-cols-1 max-lg:gap-6;
+  }
+  .leadership__intro h2 {
+    @apply mt-5 max-w-[700px] font-display text-[clamp(2.5rem,5vw,5rem)] font-normal leading-[1.04];
+  }
+  .leadership__intro > p {
+    @apply m-0 max-w-[560px] text-sm text-muted;
+  }
+  .leadership__directors {
+    @apply grid w-full grid-cols-3 gap-6 max-lg:grid-cols-2 max-md:grid-cols-1;
+  }
+  .leadership__secretary {
+    @apply mt-6 border-t border-black/10 pt-6 dark:border-white/15;
+  }
+  .leader-card {
+    @apply min-w-0;
+  }
+  .leader-card__portrait {
+    @apply relative aspect-[5/4] overflow-hidden bg-slate;
+  }
+  .leader-card__portrait > img {
+    @apply object-cover transition duration-500;
+  }
+  .leader-card__details {
+    @apply pb-5 pt-5;
+  }
+  .leader-card__details h3 {
+    @apply mb-0 mt-2 font-display text-[clamp(1.35rem,2.2vw,2rem)] font-normal leading-tight;
+  }
+  .leader-card__details > p:last-child {
+    @apply mb-0 mt-3 max-w-[520px] text-sm text-muted;
+  }
+  .leader-card--compact {
+    @apply grid grid-cols-[minmax(150px,220px)_1fr] gap-5 max-md:grid-cols-[120px_1fr];
+  }
+  .leader-card--compact .leader-card__portrait {
+    @apply aspect-[5/4];
+  }
+  .leader-card--compact .leader-card__details {
+    @apply self-end border-b-0 pb-4 pt-0;
+  }
+  .registration-detail {
+    @apply flex flex-col gap-2 pb-5 dark:border-white/15;
+  }
+  .registration-detail span {
+    @apply font-ui text-[.62rem] font-semibold uppercase tracking-[.12em] text-slate-500 dark:text-[#858a8f];
+  }
+  .registration-detail strong {
+    @apply font-display text-2xl font-normal text-elenoi-green dark:text-elenoi-green-light;
+  }
   .spotlight__content {
     @apply flex flex-col items-start justify-center p-[clamp(45px,7vw,90px)] max-md:min-h-[520px] max-md:px-6;
   }

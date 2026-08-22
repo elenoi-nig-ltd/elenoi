@@ -46,6 +46,7 @@ export function Footer() {
             Central Mosque, Gidan Kwano, Minna.
           </p>
           <a href="mailto:elenoi.nig.ltd@gmail.com">elenoi.nig.ltd@gmail.com</a>
+          <a href="mailto:flamingotechteam@gmail.com">flamingotechteam@gmail.com</a>
         </div>
       </div>
       <div className="footer-bottom wrap">

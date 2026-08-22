@@ -10,6 +10,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { BusinessRow } from "@/components/business-row";
 import { businesses } from "@/lib/businesses";
+import { LeaderCard } from "@/components/leader-card";
+import { directors } from "@/lib/leadership";
 
 const strategies = [
   {
@@ -183,6 +185,15 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+      <section className="people-preview wrap">
+        <div className="people-preview__heading">
+          <div><p className="section-number">04 / The people behind ELENOI</p><h2>Leadership with<br /><em>responsibility.</em></h2></div>
+          <Link className="text-link" href="/about#leadership">Meet our leadership <ArrowUpRight size={16} /></Link>
+        </div>
+        <div className="people-preview__grid">
+          {directors.map((leader) => <LeaderCard compact leader={leader} key={leader.slug} />)}
+        </div>
+      </section>
 
       <section className="spotlight wrap">
         <div className="spotlight__image">
@@ -195,7 +206,7 @@ export default function HomePage() {
           />
         </div>
         <div className="spotlight__content">
-          <p className="section-number">04 / Business spotlight</p>
+          <p className="section-number">05 / Business spotlight</p>
           <p className="eyebrow eyebrow--gold">Flamingo</p>
           <h2 className="text-4xl">Everyday convenience, made local.</h2>
           <p>

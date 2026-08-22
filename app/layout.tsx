@@ -98,6 +98,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
                   },
                   email: "elenoi.nig.ltd@gmail.com",
                   telephone: "+2348026968067",
+                  employee: [
+                    { "@type": "Person", name: "Oije Israel Elijah", jobTitle: "Executive Director" },
+                    { "@type": "Person", name: "Oziegbe Happiness Eghonghon", jobTitle: "Executive Director" },
+                    { "@type": "Person", name: "Nehemiah O. Odagboyi", jobTitle: "Secretary to the Board" },
+                  ],
                   subOrganization: [
                     { "@type": "Organization", name: "Flamingo French Fries", url: "https://flamingo.com.ng" },
                     { "@type": "Organization", name: "Flamingo Enterprise", url: "https://flamingo.com.ng" },

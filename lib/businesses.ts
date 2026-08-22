@@ -30,7 +30,7 @@ export const businesses: Business[] = [
   },
   {
     slug: "flamingo-enterprise",
-    name: "Flamingo Enterprise",
+    name: "Flamingo Premium Collections",
     activity: "Commerce & Merchandise",
     eyebrow: "Useful products, closer to home",
     summary:
