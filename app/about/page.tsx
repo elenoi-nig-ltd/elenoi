@@ -94,7 +94,7 @@ export default function AboutPage() {
           {directors.map((leader) => (
             <LeaderCard leader={leader} key={leader.slug} />
           ))}
-          <LeaderCard leader={boardSecretary} key={boardSecretary.slug} />
+          {/*<LeaderCard leader={boardSecretary} key={boardSecretary.slug} />*/}
         </div>
         <div className="leadership__secretary">
           <div className="registration-detail">
