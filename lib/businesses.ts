@@ -81,6 +81,25 @@ export const businesses: Business[] = [
     ],
   },
   {
+    slug: "ancient-scroll-publishers",
+    name: "Ancient Scroll Publishers Nig. Ltd",
+    activity: "Publishing",
+    eyebrow: "Knowledge made enduring",
+    summary:
+      "A publishing company devoted to useful ideas, learning and transformational thought.",
+    description:
+      "Ancient Scroll Publishers develops and distributes writing that strengthens minds, leadership and society. It advances ELENOI's belief in constant learning and constant teaching.",
+    location: "Nigeria",
+    image: "/images/businesses/ancient-scroll-publishers.jpg",
+    accent: "gold",
+    externalUrl: "https://selar.com/m/ancientscroll",
+    services: [
+      "Book publishing",
+      "Editorial development",
+      "Knowledge distribution",
+    ],
+  },
+  {
     slug: "flamingo-tech-research-hub",
     name: "Flamingo Tech & Research Hub",
     activity: "Technology & Research",
@@ -107,24 +126,6 @@ export const businesses: Business[] = [
     image: "/images/businesses/oije-farms.jpg",
     accent: "green",
     services: ["Crop production", "Agricultural development", "Food systems"],
-  },
-  {
-    slug: "ancient-scroll-publishers",
-    name: "Ancient Scroll Publishers Nig. Ltd",
-    activity: "Publishing",
-    eyebrow: "Knowledge made enduring",
-    summary:
-      "A publishing company devoted to useful ideas, learning and transformational thought.",
-    description:
-      "Ancient Scroll Publishers develops and distributes writing that strengthens minds, leadership and society. It advances ELENOI's belief in constant learning and constant teaching.",
-    location: "Nigeria",
-    image: "/images/businesses/ancient-scroll-publishers.jpg",
-    accent: "gold",
-    services: [
-      "Book publishing",
-      "Editorial development",
-      "Knowledge distribution",
-    ],
   },
 ];
 

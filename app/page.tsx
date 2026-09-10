@@ -154,7 +154,7 @@ export default function HomePage() {
           </p>
         </div>
         <div className="business-list wrap">
-          {businesses.slice(0, 4).map((business, index) => (
+          {businesses.slice(0, 5).map((business, index) => (
             <BusinessRow
               business={business}
               index={index}
